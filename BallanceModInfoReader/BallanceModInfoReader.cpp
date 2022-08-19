@@ -22,8 +22,7 @@ int main(int argc, char** argv)
 		std::cout << v.serialize();
 		return 0;
 	}
-
-	//std::cout << argv[1] << std::endl;
+	
 	HMODULE handle = LoadLibrary("BML.dll");
 	if (!handle) {
 		v.get<picojson::object>()["Status"] = picojson::value((double)GetLastError());
